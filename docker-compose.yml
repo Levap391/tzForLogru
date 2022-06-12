@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  db:
+    restart: always
+    image: mongo:4.1.8-xenial
+    container_name: testLogru
+    volumes:     
+      - ./.database/mongo/data:/data/db
+    ports:
+      - "27017:27017"
